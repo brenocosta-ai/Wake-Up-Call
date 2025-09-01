@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wake up call - Jogo de sobrevivência</title>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #0d0d0d;
+      color: white;
+    }
+
+    /* Cabeçalho fixo */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #1a1a1a;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+      z-index: 1000;
+      flex-wrap: wrap;
+    }
+
+    .logo-area {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo-area img {
+      width: 50px;
+      margin-right: 10px;
+    }
+
+    nav {
+      margin-right: 10%;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #f14949;
+    }
+
+    /* Banner */
+    .banner {
+      margin-top: 60px; 
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .banner img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Conteúdo principal */
+    main {
+      padding-top: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    section {
+      padding: 50px 20px;
+      border-bottom: 1px solid #333;
+    }
+
+    section h2 {
+      color: #f14949;
+    }
+
+    .historia-img {
+      width: 100%;
+      max-width: 800px;
+      display: block;
+      margin: 20px auto;
+      border-radius: 10px;
+    }
+
+    .carrossel {
+      position: relative;
+      max-width: 800px;
+      margin: auto;
+      overflow: hidden;
+      border-radius: 10px;
+    }
+
+    .carrossel img {
+      width: 100%;
+      display: none;
+    }
+
+    .carrossel img.active {
+      display: block;
+    }
+
+    .carrossel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.6);
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      font-size: 20px;
+    }
+
+    .carrossel-btn.left {
+      left: 10px;
+    }
+
+    .carrossel-btn.right {
+      right: 10px;
+    }
+
+    .botoes-compra {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .botoes-compra a {
+      flex: 1;
+      min-width: 150px;
+      text-align: center;
+      background-color: #70cbde;
+      color: black;
+      padding: 15px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .botoes-compra a:hover {
+      color: #f14949;
+    }
+
+    footer {
+      background-color: #1a1a1a;
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+      margin-top: 50px;
+    }
+    .btn-download {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: #70cbde;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  margin-top: 20px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-download:hover {
+  background-color: #f14949;
+  color: white;
+}
+  </style>
+</head>
+<body>
+  <!-- Cabeçalho -->
+  <header>
+    <div class="logo-area">
+      <img src="https://sdmntprnorthcentralus.oaiusercontent.com/files/00000000-7b50-622f-bc6f-454b5e4ee65b/raw" alt="logo" />
+      <h1>Wake up call</h1>
+    </div>
+    <nav>
+      <a href="#historia">História</a>
+      <a href="#Descrição">Contexto</a>
+      <a href="#personagens">Personagens</a>
+      <a href="#Objetivo">Objetivo</a>
+      <a href="#gameplay">Gameplay</a>
+    </nav>
+  </header>
+
+  <!-- Banner -->
+  <div class="banner">
+    <img src="https://cdn.discordapp.com/attachments/1410306645560397914/1411832766160699454/IMG-20250830-WA0051.jpg?ex=68b6173a&is=68b4c5ba&hm=c113a2ce5705dbec014389b48d281cd1f0748ac3600957c0f0804a8222f08ea7" alt="Banner do jogo Wake Up Call" />
+  </div>
+
+  <!-- Conteúdo Principal -->
+  <main>
+    <section id="historia">
+      <h2>História</h2>
+      <p>
+        Em um futuro não muito distante, a sociedade se encontra em uma rotina monótona e sem propósito, refém da manipulação de grandes indústrias que controlam a produção e o consumo em massa. As pessoas estão como zumbis, inconscientes e passivas, presas em um ciclo interminável de consumo e produção. Mas tudo muda para o protagonista quando ele tem uma visão do futuro apocalíptico – uma realidade onde o mundo está à beira do colapso. Apenas ele, com sua visão, pode reverter esse destino e mudar o rumo dos eventos. A jornada do herói é centrada em descobrir quem está por trás dessa manipulação e, através de suas ações, combater as forças que controlam a sociedade, salvar a Terra e restaurar a sustentabilidade.
+      </p>
+    </section>
+
+    <section id="Descrição">
+      <h2>Contexto</h2>
+      <p>O jogo apresenta um mundo pós-apocalíptico, caracterizado por construções deterioradas que refletem a falta de manutenção e cuidado por parte da população. Os cenários são compostos por ambientes abandonados, com um visual que transmite essa decadência por meio do uso de cores quentes e escuras. A direção artística segue o estilo low poly, reforçando a atmosfera desolada e estilizada do universo do jogo.</p>
+    </section>
+
+    <section id="personagens">
+      <h2>Personagens</h2>
+      <p>Cal - Protagonista que passa por vulnerabilidades financeiras.</p>
+      <p>Alienados - Reféns em último estágio de lavagem cerebral, implicam diretamente no consumo desenfreado.</p>
+      <p>GDE - Grande chefe das indústrias exploradas pelo jogador.</p>
+      <p>Mini Toximaquis - Máquinas de combustão interna que emitem CO ao jogador em curta distância.</p>
+      <p>Toximaquis - “Chefe” das Mini Toximaquis, produz, além de CO, óxido de enxofre em curta e longa distância, tendo como consequência a perda de 10 segundos do tempo caso acerte o jogador.</p>
+    </section>
+
+    <section id="Objetivo">
+      <h2>Objetivo</h2>
+      <p>O objetivo principal de Wake Up Call é desvendar os mistérios por trás da manipulação em massa que controla a sociedade, descobrindo quem está por trás dessa trama e revertendo o futuro apocalíptico visto pelo protagonista. O jogador deve enfrentar grandes indústrias responsáveis pela exploração descontrolada dos recursos naturais e o controle mental da população. Para alcançar esse objetivo, o jogador deve libertar os civis, restaurar a natureza e tomar decisões que impactam diretamente o futuro do mundo. No decorrer do jogo, o jogador é desafiado a questionar as implicações de suas escolhas, refletindo sobre o consumo, o progresso e a sustentabilidade.</p>
+    </section>
+
+
+    <section id="gameplay">
+      <h2>Gameplay</h2>
+      <p>Confira abaixo um vídeo de gameplay mostrando toda a ação e adrenalina:</p>
+      <iframe
+        width="560"
+        height="315"
+        src="https://youtu.be/eirrVgAGz_I?si=nEWp9hcTOKe9cYiD
+"
+        title="Gameplay"
+        frameborder="0"
+        allowfullscreen
+      ></iframe>
+      <section id="download">
+  <h2>Baixar o Jogo</h2>
+  <p>Clique no botão abaixo para baixar a última versão de <strong>Wake Up Call</strong>:</p>
+  <a href="caminho/do/arquivo-jogo.zip" download class="btn-download">Baixar Jogo</a>
+</section>
+    </section>
+  </main>
+
+  <!-- Rodapé -->
+  <footer>&copy; 2025 Wake Up Call - Todos os direitos reservados.</footer>
+
+  <!-- Carrossel Script (mantido se quiser adicionar imagens depois) -->
+  <script>
+    const imagens = document.querySelectorAll(".carrossel img");
+    const btnEsquerda = document.querySelector(".carrossel-btn.left");
+    const btnDireita = document
+
